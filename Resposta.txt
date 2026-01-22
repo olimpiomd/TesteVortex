@@ -1,0 +1,6 @@
+1- O fluxo de dados deve passar pela view, onde os dados são encapsulados dentro em um DTO (Data Transfer Object), em seguida em um serviço de aplicação onde faz o mapeamento e o DTO vira uma Entidade de Dompinio e inicia um serviço de tansação inicindo os dominios necessarios e coordena a presistência, e depois passa pelo dominios onde tem uma validação para verificar se o estado é consistente e verifica se a operação envolve múltiplsa enidade para acios um Domain Service, por fim um repositório utiliza um ORM(Entity Framework) para traduzir a entidade com comandos SQL e depois grava os dados no Banco de dados
+
+2- Com o uso de ASP.NET Core Identity combinado com JWT (JSON Web Tokens) Usar a classe IndentityUser e adiciona campos personalizados sendo data de nascimento, CPF, RG e etc.... No DbContext coloque para herdar o IdentityDbContext. Para o serviço de login vai usar um AuthService, onde vai receber as credencias de acesso (e-mail e senha) após o sucesso vai ser gerada um Token JWT, o token JWT permite que usuário continue autenticado sem que o servidor pessa confirmação a todo momento
+
+3- Para evitar esse gargalo podemos usar o ViewModel Composition, no lugar de carregar tudo na Controller, podemos usar o View Components (No ASP.NET Core) onde cada uma das 6 sessões será um View Component independete e vai carregar seus próprios dados
+
