@@ -1,0 +1,1 @@
+Para visualizar o funcionamento do CRUD desse código deve usar o endereço local da aplicação https://localhost:7252/scalar/v1 ou http://localhost:5109/scalar/v1 essa aplicação foi desenvolvida em .Net 9 ela não tem suporte ao Swagger somente ao scalar
